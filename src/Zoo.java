@@ -6,6 +6,10 @@ public class Zoo{
     private int[] lesEnclos = new int[nombreEnclos];
     int nombreTotalAnimaux;
 
+    /**
+     * le constructeur de classe
+     * @param nom pour le nom
+     */
     public Zoo(String nom) {
         setNom(nom);
         setPileGardiens(getPileGardiens());
@@ -62,4 +66,9 @@ public class Zoo{
     public void setNombreTotalAnimaux(int nombreTotalAnimaux) {
         this.nombreTotalAnimaux = nombreTotalAnimaux;
     }
+
+    public boolean ajouterEnclos(Enclos[] lesEnclos){
+        while()
+    }
+
 }
