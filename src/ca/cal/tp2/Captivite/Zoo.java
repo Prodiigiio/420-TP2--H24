@@ -96,5 +96,10 @@ public class Zoo {
         return gardienCongedier;
     }
 
-
+    public void ajouterGardien(Gardien gardien){
+        for(Enclos enclos : lesEnclos) {
+            if(enclos.getGardien() == null)
+                
+        }
+    }
 }
