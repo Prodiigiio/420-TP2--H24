@@ -1,3 +1,0 @@
-public enum Classe {
-    POISSON, CETACE, REPTILE, OISEAU, MAMMIFERE
-}

@@ -1,3 +1,6 @@
+import Captivite.Enclos;
+import Captivite.Zoo;
+
 public class Visiteur {
     private String nom;
     private int age;

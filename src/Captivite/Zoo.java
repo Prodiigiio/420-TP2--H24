@@ -1,3 +1,8 @@
+package Captivite;
+
+import GestionDonnees.File;
+import GestionDonnees.Pile;
+
 public class Zoo{
     private String nom;
     private Pile pileGardiens;
