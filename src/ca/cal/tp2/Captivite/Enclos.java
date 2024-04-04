@@ -66,5 +66,9 @@ public class Enclos {
         this.gardien = gardien;
     }
 
+    public void ajouterAnimaux(Animal[] lesAnimaux){
+        if (lesAnimaux.length -1 > getCapaciteMax()) return;
+        setAnimaux(lesAnimaux);
+    }
 
 }
