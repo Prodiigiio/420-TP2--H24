@@ -7,5 +7,62 @@ public class Animal {
     private ClassificationAnimale classificationAnimale;
     private String espece;
 
+    private double besoinAlimentaire;
 
+    public Animal(String nom, String  regimeAlimentaire, double poids,
+                  ClassificationAnimale classificationAnimale, String espece){
+        setNom(nom);
+        setRegimeAlimentaire(regimeAlimentaire);
+        setPoids(poids);
+        setClassificationAnimale(classificationAnimale);
+        setEspece(espece);
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getRegimeAlimentaire() {
+        return regimeAlimentaire;
+    }
+
+    public void setRegimeAlimentaire(String regimeAlimentaire) {
+        this.regimeAlimentaire = regimeAlimentaire;
+    }
+
+    public double getPoids() {
+        return poids;
+    }
+
+    public void setPoids(double poids) {
+        this.poids = poids;
+    }
+
+    public ClassificationAnimale getClassificationAnimale() {
+        return classificationAnimale;
+    }
+
+    public void setClassificationAnimale(ClassificationAnimale classificationAnimale) {
+        this.classificationAnimale = classificationAnimale;
+    }
+
+    public String getEspece() {
+        return espece;
+    }
+
+    public void setEspece(String espece) {
+        this.espece = espece;
+    }
+
+    public double getBesoinAlimentaire() {
+        return besoinAlimentaire;
+    }
+
+    public void setBesoinAlimentaire(double besoinAlimentaire) {
+        this.besoinAlimentaire = besoinAlimentaire;
+    }
 }
