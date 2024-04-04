@@ -1,6 +1,9 @@
-import Employes.Gardien;
-import Employes.Veterinaire;
+package ca.cal.tp2;
+
+import ca.cal.tp2.Employes.Gardien;
+import ca.cal.tp2.Employes.Veterinaire;
 import Captivite.*;
+import ca.cal.tp2.Captivite.*;
 
 // Classe principale représentant la gestion du zoo
 public class Main {
@@ -107,7 +110,3 @@ public class Main {
         }
     }
 }
-
-
-
-

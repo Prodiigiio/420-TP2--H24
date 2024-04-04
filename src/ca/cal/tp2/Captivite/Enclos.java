@@ -1,7 +1,7 @@
-package Captivite;
+package ca.cal.tp2.Captivite;
 
-import Employes.Gardien;
-import Employes.Veterinaire;
+import ca.cal.tp2.Employes.Gardien;
+import ca.cal.tp2.Employes.Veterinaire;
 
 public class Enclos {
     private String nom;
@@ -65,4 +65,6 @@ public class Enclos {
     public void setGardien(Gardien gardien) {
         this.gardien = gardien;
     }
+
+
 }

@@ -1,7 +1,7 @@
-package Captivite;
+package ca.cal.tp2.Captivite;
 
-import GestionDonnees.File;
-import GestionDonnees.Pile;
+import ca.cal.tp2.GestionDonnees.File;
+import ca.cal.tp2.GestionDonnees.Pile;
 
 public class Zoo{
     private String nom;

@@ -1,4 +1,4 @@
-package Captivite;
+package ca.cal.tp2.Captivite;
 
 public class Animal {
     private String nom;

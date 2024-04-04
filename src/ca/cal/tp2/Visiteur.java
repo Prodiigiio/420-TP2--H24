@@ -1,5 +1,7 @@
-import Captivite.Enclos;
-import Captivite.Zoo;
+package ca.cal.tp2;
+
+import ca.cal.tp2.Captivite.Enclos;
+import ca.cal.tp2.Captivite.Zoo;
 
 public class Visiteur {
     private String nom;

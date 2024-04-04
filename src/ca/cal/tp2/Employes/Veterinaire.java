@@ -1,6 +1,6 @@
-package Employes;
+package ca.cal.tp2.Employes;
 
-import Captivite.ClassificationAnimale;
+import ca.cal.tp2.Captivite.ClassificationAnimale;
 
 public class Veterinaire {
     private String nom;
