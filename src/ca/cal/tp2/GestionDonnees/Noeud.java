@@ -5,7 +5,7 @@ public class Noeud {
     private Visiteur valeur;
     private Noeud suivant;
 
-    public Noeud(Visiteur valeur, Noeud suivant){
+    public Noeud(Visiteur valeur){
         setValeur(valeur);
         setSuivant(null);
     }

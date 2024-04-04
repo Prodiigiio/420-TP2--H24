@@ -1,14 +1,16 @@
 package ca.cal.tp2.Captivite;
 
 import ca.cal.tp2.GestionDonnees.File;
+import ca.cal.tp2.GestionDonnees.Noeud;
 import ca.cal.tp2.GestionDonnees.Pile;
+import ca.cal.tp2.Visiteur;
 
 public class Zoo{
     private String nom;
     private Pile pileGardiens;
     private File fileVisiteurs;
-    private int nombreEnclos;
-    private int[] lesEnclos = new int[nombreEnclos];
+    private final int NOMBRE_ENCLOS = 5;
+    private Enclos[] lesEnclos = new Enclos[NOMBRE_ENCLOS];
     int nombreTotalAnimaux;
 
     /**
@@ -19,7 +21,6 @@ public class Zoo{
         setNom(nom);
         setPileGardiens(getPileGardiens());
         setFileVisiteurs(getFileVisiteurs());
-        setNombreEnclos(getNombreEnclos());
         setLesEnclos(getLesEnclos());
         setNombreTotalAnimaux(getNombreTotalAnimaux());
     }
@@ -48,19 +49,15 @@ public class Zoo{
         this.fileVisiteurs = fileVisiteurs;
     }
 
-    public int getNombreEnclos() {
-        return nombreEnclos;
+    public int getNOMBRE_ENCLOS() {
+        return NOMBRE_ENCLOS;
     }
 
-    public void setNombreEnclos(int nombreEnclos) {
-        this.nombreEnclos = nombreEnclos;
-    }
-
-    public int[] getLesEnclos() {
+    public Enclos[] getLesEnclos() {
         return lesEnclos;
     }
 
-    public void setLesEnclos(int[] lesEnclos) {
+    public void setLesEnclos(Enclos[] lesEnclos) {
         this.lesEnclos = lesEnclos;
     }
 
@@ -73,7 +70,13 @@ public class Zoo{
     }
 
     public boolean ajouterEnclos(Enclos[] lesEnclos){
-        while()
+        if(lesEnclos.length > NOMBRE_ENCLOS)  return false;
+        setLesEnclos(lesEnclos);
+        return true;
+    }
+
+    public void arriveeVisiteur(Visiteur visiteur){
+        fileVisiteurs.ajouter(new Noeud(visiteur));
     }
 
 }
