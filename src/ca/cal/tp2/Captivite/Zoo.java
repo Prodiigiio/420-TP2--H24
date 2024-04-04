@@ -78,6 +78,7 @@ public class Zoo {
     }
 
     public void arriveeVisiteur(Visiteur visiteur) {
+        if()
         fileVisiteurs.ajouter(new Noeud(visiteur));
     }
 
@@ -99,7 +100,7 @@ public class Zoo {
     public void ajouterGardien(Gardien gardien){
         for(Enclos enclos : lesEnclos) {
             if(enclos.getGardien() == null)
-                
+
         }
     }
 }
