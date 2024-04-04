@@ -1,11 +1,12 @@
 package ca.cal.tp2.Captivite;
 
+import ca.cal.tp2.Employes.Gardien;
 import ca.cal.tp2.GestionDonnees.File;
 import ca.cal.tp2.GestionDonnees.Noeud;
 import ca.cal.tp2.GestionDonnees.Pile;
 import ca.cal.tp2.Visiteur;
 
-public class Zoo{
+public class Zoo {
     private String nom;
     private Pile pileGardiens;
     private File fileVisiteurs;
@@ -15,6 +16,7 @@ public class Zoo{
 
     /**
      * le constructeur de classe
+     *
      * @param nom pour le nom
      */
     public Zoo(String nom) {
@@ -69,14 +71,30 @@ public class Zoo{
         this.nombreTotalAnimaux = nombreTotalAnimaux;
     }
 
-    public boolean ajouterEnclos(Enclos[] lesEnclos){
-        if(lesEnclos.length > NOMBRE_ENCLOS)  return false;
+    public boolean ajouterEnclos(Enclos[] lesEnclos) {
+        if (lesEnclos.length > NOMBRE_ENCLOS) return false;
         setLesEnclos(lesEnclos);
         return true;
     }
 
-    public void arriveeVisiteur(Visiteur visiteur){
+    public void arriveeVisiteur(Visiteur visiteur) {
         fileVisiteurs.ajouter(new Noeud(visiteur));
     }
+
+    public Gardien retirerGardien() {
+        if (pileGardiens.getNbElements() == 0) {
+            return null;
+        }
+
+        Gardien gardienCongedier = getPileGardiens().pop();
+
+        for(int i = 0; i < getLesEnclos().length; i++) {
+            if (getLesEnclos()[i].getGardien().equals(gardienCongedier) && gardienCongedier.getCompetence() > 20) {
+                return null;
+            }
+        }
+        return gardienCongedier;
+    }
+
 
 }
