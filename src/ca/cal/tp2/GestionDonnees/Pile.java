@@ -35,4 +35,36 @@ public class Pile {
     public void setCapacite(int capacite) {
         this.capacite = capacite;
     }
+
+    public void push(Gardien nouveauGardien){
+        adapterCapacite();
+        embaucherGardien(nouveauGardien);
+    }
+
+    public Gardien pop(){
+        if(getNbElements() == 0) return null;
+        Gardien gardienRecent = gardiens[getNbElements() -1];
+        gardiens[getNbElements() -1] = null;
+        nbElements--;
+        return gardienRecent;
+    }
+
+    private void adapterCapacite() {
+        if(!(nbElements == capacite)) return;
+        Gardien[] gardienAgrandi = new Gardien[getCapacite() * RATION_AGRANDISEMENT];
+        for (int i = 0; i < gardiens.length; i++) {
+            gardienAgrandi[i] = getGardiens()[i];
+        }
+        this.gardiens = gardienAgrandi;
+    }
+
+    private void embaucherGardien( Gardien leNouveau){
+        for (int i = 0; i < getGardiens().length; i++) {
+            if(getGardiens()[i] == null) {
+                getGardiens()[i] = leNouveau;
+                nbElements++;
+                return;
+            }
+        }
+    }
 }
