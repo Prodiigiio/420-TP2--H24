@@ -1,7 +1,3 @@
-package ca.cal.tp2.Employes;
-
-import ca.cal.tp2.Captivite.ClassificationAnimale;
-
 public class Veterinaire {
     private String nom;
     private ClassificationAnimale specialiste;

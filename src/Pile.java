@@ -1,6 +1,3 @@
-package ca.cal.tp2.GestionDonnees;
-
-import ca.cal.tp2.Employes.Gardien;
 
 public class Pile {
     private final int TAILLE_INITIALE = 4;

@@ -1,9 +1,3 @@
-package ca.cal.tp2;
-
-import ca.cal.tp2.Employes.Gardien;
-import ca.cal.tp2.Employes.Veterinaire;
-import ca.cal.tp2.Captivite.*;
-
 // Classe principale représentant la gestion du zoo
 public class Main {
     public static void main(String[] args) {

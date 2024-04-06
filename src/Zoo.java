@@ -1,11 +1,3 @@
-package ca.cal.tp2.Captivite;
-
-import ca.cal.tp2.Employes.Gardien;
-import ca.cal.tp2.GestionDonnees.File;
-import ca.cal.tp2.GestionDonnees.Noeud;
-import ca.cal.tp2.GestionDonnees.Pile;
-import ca.cal.tp2.Visiteur;
-
 public class Zoo {
     private String nom;
     private Pile pileGardiens;
@@ -103,7 +95,7 @@ public class Zoo {
 
     public void ajouterGardien(Gardien gardien){
         for(Enclos enclos : lesEnclos) {
-            if(enclos.getGardien() == null)
+            if(enclos.getGardien() == null);
 
         }
     }

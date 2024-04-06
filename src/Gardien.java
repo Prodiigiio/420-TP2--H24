@@ -1,5 +1,3 @@
-package ca.cal.tp2.Employes;
-
 public class Gardien {
     private String nom;
     private int competence;

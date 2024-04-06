@@ -1,8 +1,3 @@
-package ca.cal.tp2.Captivite;
-
-import ca.cal.tp2.Employes.Gardien;
-import ca.cal.tp2.Employes.Veterinaire;
-
 public class Enclos {
     private String nom;
     private int nombreAnimaux;

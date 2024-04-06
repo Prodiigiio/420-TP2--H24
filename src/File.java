@@ -1,7 +1,3 @@
-package ca.cal.tp2.GestionDonnees;
-
-import ca.cal.tp2.Visiteur;
-
 public class File {
     private Noeud premier;
     private int nbElements;

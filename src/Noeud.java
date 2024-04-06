@@ -1,6 +1,3 @@
-package ca.cal.tp2.GestionDonnees;
-import ca.cal.tp2.Visiteur;
-
 public class Noeud {
     private Visiteur valeur;
     private Noeud suivant;
