@@ -78,8 +78,12 @@ public class Zoo {
     }
 
     public void arriveeVisiteur(Visiteur visiteur) {
-        if()
-        fileVisiteurs.ajouter(new Noeud(visiteur));
+        if(visiteur.getAge() < 65){
+            fileVisiteurs.ajouter(visiteur);
+        }
+        else {
+            fileVisiteurs.ajoutPriorite(visiteur);
+        }
     }
 
     public Gardien retirerGardien() {
