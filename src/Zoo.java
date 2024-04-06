@@ -63,6 +63,9 @@ public class Zoo {
         this.nombreTotalAnimaux = nombreTotalAnimaux;
     }
 
+    public Visiteur retirerVisiteur(){
+        return getFileVisiteurs().pop().getValeur();
+    }
     public boolean ajouterEnclos(Enclos[] lesEnclos) {
         if (lesEnclos.length > NOMBRE_ENCLOS) return false;
         setLesEnclos(lesEnclos);
@@ -79,14 +82,12 @@ public class Zoo {
     }
 
     public Gardien retirerGardien() {
-        if (pileGardiens.getNbElements() == 0) {
-            return null;
-        }
+        if (pileGardiens.getNbElements() == 0) return null;
 
         Gardien gardienCongedier = getPileGardiens().pop();
 
         for(int i = 0; i < getLesEnclos().length; i++) {
-            if (getLesEnclos()[i].getGardien().equals(gardienCongedier) && gardienCongedier.getCompetence() > 20) {
+            if (getLesEnclos()[i].getGardien().equals(gardienCongedier) && gardienCongedier.getCompetence() >= 20) {
                 return null;
             }
         }
