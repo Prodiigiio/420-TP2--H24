@@ -28,10 +28,16 @@ public class Entree {
     public Visiteur getVisiteur() {
         return visiteur;
     }
-
+    public void setVisiteur(Visiteur visiteur) {
+        this.visiteur = visiteur;
+    }
 
     public Zoo getZoo() {
         return zoo;
+    }
+
+    public void setZoo(Zoo zoo) {
+        this.zoo = zoo;
     }
 
     private Enclos[] getEnclosSecure(){
