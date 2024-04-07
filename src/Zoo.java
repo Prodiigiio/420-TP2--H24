@@ -63,13 +63,15 @@ public class Zoo {
         this.nombreTotalAnimaux = nombreTotalAnimaux;
     }
 
-    public Visiteur retirerVisiteur(){
-        return getFileVisiteurs().pop().getValeur();
-    }
+
     public boolean ajouterEnclos(Enclos[] lesEnclos) {
         if (lesEnclos.length > NOMBRE_ENCLOS) return false;
         setLesEnclos(lesEnclos);
         return true;
+    }
+
+    public Visiteur retirerVisiteur(){
+        return getFileVisiteurs().pop().getValeur();
     }
 
     public void arriveeVisiteur(Visiteur visiteur) {
@@ -79,6 +81,27 @@ public class Zoo {
         else {
             fileVisiteurs.ajoutPriorite(visiteur);
         }
+    }
+
+    public void ajouterGardien(Gardien gardien){
+        for(Enclos enclos : lesEnclos) {
+            if(enclos.getGardien() == null){
+
+                enclos.setGardien(gardien);
+            }
+        }
+    }
+
+    private Enclos enclosSansGardienAvecMoinsAnimaux(Enclos[] enclos){
+        int nbAnimaux = enclos[0].getNombreAnimaux();
+        Enclos enclosAvecLeMoinsAnimaux = enclos[0];
+        for (Enclos e : enclos){
+            if (e.getNombreAnimaux() < nbAnimaux){
+                nbAnimaux = e.getNombreAnimaux();
+                enclosAvecLeMoinsAnimaux = e;
+            }
+        }
+        return enclosAvecLeMoinsAnimaux;
     }
 
     public Gardien retirerGardien() {
@@ -94,10 +117,5 @@ public class Zoo {
         return gardienCongedier;
     }
 
-    public void ajouterGardien(Gardien gardien){
-        for(Enclos enclos : lesEnclos) {
-            if(enclos.getGardien() == null);
 
-        }
-    }
 }
