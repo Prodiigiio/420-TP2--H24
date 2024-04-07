@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Zoo {
     private String nom;
     private Pile pileGardiens;
@@ -84,12 +86,15 @@ public class Zoo {
     }
 
     public void ajouterGardien(Gardien gardien){
+        Enclos[] enclosVideDeGardien = new Enclos[NOMBRE_ENCLOS];
+        int i = 0;
         for(Enclos enclos : lesEnclos) {
             if(enclos.getGardien() == null){
-
-                enclos.setGardien(gardien);
+                enclosVideDeGardien[i] = enclos;
+                i++;
             }
         }
+        enclosSansGardienAvecMoinsAnimaux(enclosVideDeGardien).setGardien(gardien);
     }
 
     private Enclos enclosSansGardienAvecMoinsAnimaux(Enclos[] enclos){
