@@ -101,7 +101,7 @@ public class Zoo {
     }
 
     private Enclos enclosSansGardienAvecMoinsAnimaux(Enclos[] enclos){
-        if(enclos[0] == null) return enclos[0];
+        if(enclos[0] == null) return null;
         int nbAnimaux = enclos[0].getNombreAnimaux();
         Enclos enclosAvecLeMoinsAnimaux = enclos[0];
         for (Enclos e : enclos){
@@ -110,6 +110,7 @@ public class Zoo {
                 enclosAvecLeMoinsAnimaux = e;
             }
         }
+        if(enclosAvecLeMoinsAnimaux == null) return null;
         return enclosAvecLeMoinsAnimaux;
     }
 
