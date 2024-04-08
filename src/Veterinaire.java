@@ -8,7 +8,7 @@ public class Veterinaire {
     }
 
     public String getNom() {
-        return nom;
+        return "Dr. " + nom;
     }
 
     public void setNom(String nom) {
@@ -29,5 +29,10 @@ public class Veterinaire {
         } else {
             System.out.println("Le veterinaire " + getNom() + " ne peut pas soigner l'animal " + animal.getNom());
         }
+    }
+
+    @Override
+    public String toString() {
+        return "[" + getNom() + ", " + getSpecialiste() + "]";
     }
 }

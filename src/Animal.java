@@ -66,6 +66,6 @@ public class Animal {
 
     @Override
     public String toString() {
-            return ("--- Le " + getClassificationAnimale() + " nommé " + getNom() + " pèse" + getPoids() + " kg et son besoin alimentaire " + getBesoinAlimentaire() + " de kg \n");
+            return ("--- Le " + getClassificationAnimale() + " nommé " + getNom() + " pèse " + getPoids() + "kg et son besoin alimentaire " + getBesoinAlimentaire() + " de kg \n");
     }
 }
