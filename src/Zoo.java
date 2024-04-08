@@ -38,8 +38,7 @@ public class Zoo {
     }
 
     public File getFileVisiteurs() {
-        if(fileVisiteurs == null)
-            return null;
+        if(fileVisiteurs == null) return null;
         return fileVisiteurs;
     }
 
@@ -132,6 +131,4 @@ public class Zoo {
         }
         return gardienCongedier;
     }
-
-
 }

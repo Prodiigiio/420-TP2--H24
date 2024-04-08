@@ -66,4 +66,14 @@ public class Enclos {
         setAnimaux(lesAnimaux);
     }
 
+    @Override
+    public String toString() {
+        String resultat = "Enclos " + getNom() + " est peuplé avec " + getNombreAnimaux() + " animaux. Sa capacité est de " + getCapaciteMax() + " animaux. "
+                + "Le vétérinaire assigné est " + getVeterinaire().getNom() + ". Le gardien actuel est " + getGardien().getNom() + ".";
+       resultat += ("Les animaux dans cet enclos: ");
+        for (Animal animal : getAnimaux()){
+            resultat += ("--- Le " + animal.getClassificationAnimale() + " nommé " + animal.getNom() + " pèse" + animal.getPoids() + " kg et son besoin alimentaire " + animal.getBesoinAlimentaire() + "\n");
+        }
+        return resultat;
+    }
 }
