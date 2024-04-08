@@ -48,4 +48,9 @@ public class Gardien {
             animal.setPoids(poids - (poids * 0.05));
         }
     }
+
+    @Override
+    public String toString() {
+        return "Gardien " + getNom() + " (" + getId() + "), competence : " + getCompetence();
+    }
 }
