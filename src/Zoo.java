@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Zoo {
     private String nom;
     private Pile pileGardiens;
@@ -37,7 +35,6 @@ public class Zoo {
     }
 
     public File getFileVisiteurs() {
-        //if(fileVisiteurs == null) return null;
         return fileVisiteurs;
     }
 
@@ -77,7 +74,6 @@ public class Zoo {
     }
 
     public void arriveeVisiteur(Visiteur visiteur) {
-        //if(getFileVisiteurs() == null) {return;}
         if(visiteur.getAge() < 65){
             fileVisiteurs.ajouter(visiteur);
         }
