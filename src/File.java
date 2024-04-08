@@ -11,13 +11,13 @@ public class File {
 
 
     public boolean estVide(){
-        return nbElements != 0;
+        return nbElements == 0;
     }
 
     public void ajouter(Visiteur visiteur) {
         Noeud nouveauNoeud = new Noeud(visiteur);
         if (estVide()) {
-            premier = nouveauNoeud;
+            setPremier(nouveauNoeud);
         } else {
             getDernierNoeud().setSuivant(nouveauNoeud);
         }
