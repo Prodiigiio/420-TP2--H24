@@ -51,6 +51,6 @@ public class Gardien {
 
     @Override
     public String toString() {
-        return "Gardien " + getNom() + " (" + getId() + "), competence : " + getCompetence();
+        return "[" + getNom() + " " + getId() + ", " + getCompetence();
     }
 }
