@@ -72,7 +72,7 @@ public class Enclos {
                 + "Le vétérinaire assigné est " + getVeterinaire().getNom() + ". Le gardien actuel est " + getGardien().getNom() + ".";
        resultat += ("Les animaux dans cet enclos: ");
         for (Animal animal : getAnimaux()){
-            resultat += ("--- Le " + animal.getClassificationAnimale() + " nommé " + animal.getNom() + " pèse" + animal.getPoids() + " kg et son besoin alimentaire " + animal.getBesoinAlimentaire() + "\n");
+            resultat += ("--- Le " + animal.getClassificationAnimale() + " nommé " + animal.getNom() + " pèse" + animal.getPoids() + " kg et son besoin alimentaire " + animal.getBesoinAlimentaire() + " de kg \n");
         }
         return resultat;
     }

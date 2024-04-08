@@ -42,4 +42,14 @@ public class File {
         visiteurPrioritaire.setSuivant(premier);
         setPremier(visiteurPrioritaire);
     }
+
+    @Override
+    public String toString() {
+        String file = "";
+        while (premier.getSuivant() != null){
+            file += ("["+ premier.getValeur() + ", " + premier.getSuivant() + "] ->");
+            premier = premier.getSuivant();
+        }
+        return file;
+    }
 }
