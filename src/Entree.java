@@ -12,6 +12,7 @@ public class Entree {
         setPrix(billeterie());
     }
 
+
     public int getNombreEnclos() {
         return nombreEnclos;
     }
@@ -19,10 +20,9 @@ public class Entree {
         this.nombreEnclos = nombreEnclos;
     }
 
-    public Enclos[] getLesEnclos() {
+    public Enclos[] getEnclos() {
         return lesEnclos;
     }
-
 
     public double getPrix() {
         return prix;
