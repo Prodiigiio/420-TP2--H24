@@ -80,4 +80,12 @@ public class Entree {
             return (prixInitial + surchargeAnimal) * 0.5;
         }
     }
+
+    public void afficherEnclos(){
+        System.out.println("Les enclos accessibles pour " + visiteur.getNom() + " sont : ");
+        Enclos[] enclos = getLesEnclos();
+        for(Enclos enclo : enclos){
+            System.out.println(enclo.getNom());
+        }
+    }
 }
