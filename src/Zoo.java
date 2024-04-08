@@ -77,6 +77,9 @@ public class Zoo {
     }
 
     public void arriveeVisiteur(Visiteur visiteur) {
+        if(getFileVisiteurs() == null) {
+            return;
+        }
         if(visiteur.getAge() < 65){
             fileVisiteurs.ajouter(visiteur);
         }
