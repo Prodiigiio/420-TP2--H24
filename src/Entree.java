@@ -83,7 +83,7 @@ public class Entree {
 
     public void afficherEnclos(){
         System.out.println("Les enclos accessibles pour " + visiteur.getNom() + " sont : ");
-        Enclos[] enclos = getLesEnclos();
+        Enclos[] enclos = getEnclos();
         for(Enclos enclo : enclos){
             System.out.println(enclo.getNom());
         }

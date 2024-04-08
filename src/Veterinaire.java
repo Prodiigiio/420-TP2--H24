@@ -22,4 +22,12 @@ public class Veterinaire {
     public void setSpecialiste(ClassificationAnimale specialiste) {
         this.specialiste = specialiste;
     }
+
+    public void soignerAnimal(Animal animal){
+        if (animal.getClassificationAnimale() == getSpecialiste()){
+            System.out.println("Le veterinaire " + getNom() + " soigne l'animal " + animal.getNom());
+        } else {
+            System.out.println("Le veterinaire " + getNom() + " ne peut pas soigner l'animal " + animal.getNom());
+        }
+    }
 }
