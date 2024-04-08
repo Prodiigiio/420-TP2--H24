@@ -5,7 +5,7 @@ public class Zoo {
     private Pile pileGardiens;
     private File fileVisiteurs;
     private final int NOMBRE_ENCLOS = 5;
-    private Enclos[] lesEnclos = new Enclos[NOMBRE_ENCLOS];
+    private Enclos[] lesEnclos;
     int nombreTotalAnimaux;
 
     /**
@@ -15,10 +15,9 @@ public class Zoo {
      */
     public Zoo(String nom) {
         setNom(nom);
-        setPileGardiens(getPileGardiens());
-        setFileVisiteurs(getFileVisiteurs());
-        setLesEnclos(getLesEnclos());
-        setNombreTotalAnimaux(getNombreTotalAnimaux());
+        setPileGardiens(new Pile());
+        setFileVisiteurs(new File());
+        setLesEnclos(new Enclos[NOMBRE_ENCLOS]);
     }
 
     public String getNom() {
@@ -38,7 +37,7 @@ public class Zoo {
     }
 
     public File getFileVisiteurs() {
-        if(fileVisiteurs == null) return null;
+        //if(fileVisiteurs == null) return null;
         return fileVisiteurs;
     }
 
@@ -78,9 +77,7 @@ public class Zoo {
     }
 
     public void arriveeVisiteur(Visiteur visiteur) {
-        if(getFileVisiteurs() == null) {
-            return;
-        }
+        //if(getFileVisiteurs() == null) {return;}
         if(visiteur.getAge() < 65){
             fileVisiteurs.ajouter(visiteur);
         }
@@ -126,9 +123,16 @@ public class Zoo {
 
         for(int i = 0; i < getLesEnclos().length; i++) {
             if (getLesEnclos()[i].getGardien().equals(gardienCongedier) && gardienCongedier.getCompetence() >= 20) {
+                System.out.println("On ne peut pas retirer ce gardien " + gardienCongedier.getNom() + " car il a une compétence de " + gardienCongedier.getCompetence());
                 return null;
             }
         }
+        System.out.println("On retire le dernier gardien arrivé au zoo: " + gardienCongedier.getNom());
         return gardienCongedier;
+    }
+
+    @Override
+    public String toString() {
+        return "baka";
     }
 }

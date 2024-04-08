@@ -1,14 +1,15 @@
 public class File {
     private Noeud premier;
     private int nbElements;
+    public File(){
+        this.nbElements = 0;
+    }
 
     public void setPremier(Noeud premier) {
         this.premier = premier;
     }
 
-    public File(){
-        this.nbElements = 0;
-    }
+
     public boolean estVide(){
         return nbElements != 0;
     }
