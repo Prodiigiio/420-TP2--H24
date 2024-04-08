@@ -63,4 +63,9 @@ public class Animal {
     public void setBesoinAlimentaire(double besoinAlimentaire) {
         this.besoinAlimentaire = besoinAlimentaire;
     }
+
+    @Override
+    public String toString() {
+            return ("--- Le " + getClassificationAnimale() + " nommé " + getNom() + " pèse" + getPoids() + " kg et son besoin alimentaire " + getBesoinAlimentaire() + " de kg \n");
+    }
 }
