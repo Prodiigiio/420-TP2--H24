@@ -113,6 +113,7 @@ public class Zoo {
     }
 
     public Gardien retirerGardien() {
+        if(getPileGardiens() == null) return null;
         if (pileGardiens.getNbElements() == 0) return null;
 
         Gardien gardienCongedier = getPileGardiens().pop();
