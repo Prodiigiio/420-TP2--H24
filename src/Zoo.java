@@ -97,7 +97,10 @@ public class Zoo {
                 i++;
             }
         }
-        enclosSansGardienAvecMoinsAnimaux(enclosVideDeGardien).setGardien(gardien);
+         if(enclosSansGardienAvecMoinsAnimaux(enclosVideDeGardien) == null){
+             return;
+         }
+         enclosSansGardienAvecMoinsAnimaux(enclosVideDeGardien).setGardien(gardien);
     }
 
     private Enclos enclosSansGardienAvecMoinsAnimaux(Enclos[] enclos){
