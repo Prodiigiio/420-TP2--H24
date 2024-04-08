@@ -38,6 +38,8 @@ public class Zoo {
     }
 
     public File getFileVisiteurs() {
+        if(fileVisiteurs == null)
+            return null;
         return fileVisiteurs;
     }
 
