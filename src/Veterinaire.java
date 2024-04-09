@@ -1,8 +1,8 @@
 public class Veterinaire {
     private String nom;
-    private ClassificationAnimale specialiste;
+    private Classe specialiste;
 
-    public Veterinaire(String nom, ClassificationAnimale specialiste){
+    public Veterinaire(String nom, Classe specialiste){
         setNom(nom);
         setSpecialiste(specialiste);
     }
@@ -15,11 +15,11 @@ public class Veterinaire {
         this.nom = nom;
     }
 
-    public ClassificationAnimale getSpecialiste() {
+    public Classe getSpecialiste() {
         return specialiste;
     }
 
-    public void setSpecialiste(ClassificationAnimale specialiste) {
+    public void setSpecialiste(Classe specialiste) {
         this.specialiste = specialiste;
     }
 

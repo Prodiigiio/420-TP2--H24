@@ -47,9 +47,10 @@ public class File {
     @Override
     public String toString() {
         String file = "";
-        while (premier.getSuivant() != null){
-            file += ("["+ premier.getValeur() + ", " + premier.getSuivant() + "] ->");
-            premier = premier.getSuivant();
+        Noeud courrant = premier;
+        while (courrant != null){
+            file += (courrant.getSuivant() + " -> ");
+            courrant = courrant.getSuivant();
         }
         return file;
     }

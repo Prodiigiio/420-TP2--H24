@@ -2,17 +2,17 @@ public class Animal {
     private String nom;
     private String regimeAlimentaire;
     private double poids;
-    private ClassificationAnimale classificationAnimale;
+    private Classe classe;
     private String espece;
 
     private double besoinAlimentaire;
 
     public Animal(String nom, String  regimeAlimentaire, double poids,
-                  ClassificationAnimale classificationAnimale, String espece){
+                  Classe classe, String espece){
         setNom(nom);
         setRegimeAlimentaire(regimeAlimentaire);
         setPoids(poids);
-        setClassificationAnimale(classificationAnimale);
+        setClassificationAnimale(classe);
         setEspece(espece);
     }
 
@@ -40,12 +40,12 @@ public class Animal {
         this.poids = poids;
     }
 
-    public ClassificationAnimale getClassificationAnimale() {
-        return classificationAnimale;
+    public Classe getClassificationAnimale() {
+        return classe;
     }
 
-    public void setClassificationAnimale(ClassificationAnimale classificationAnimale) {
-        this.classificationAnimale = classificationAnimale;
+    public void setClassificationAnimale(Classe classe) {
+        this.classe = classe;
     }
 
     public String getEspece() {

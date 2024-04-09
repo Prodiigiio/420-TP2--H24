@@ -3,6 +3,7 @@ public class Gardien {
     private int competence;
     private static int idGenerale = 1000;
     private int id;
+    private String sexe;
 
     public Gardien(String nom, int competence){
         setNom(nom);
@@ -11,7 +12,7 @@ public class Gardien {
     }
 
     public String getNom() {
-        return "Mme. " + nom;
+        return nom;
     }
 
     public void setNom(String nom) {
@@ -51,6 +52,6 @@ public class Gardien {
 
     @Override
     public String toString() {
-        return "[" + getNom() + " " + getId() + ", " + getCompetence();
+        return "[" + getNom() + " " + "(" + getId() + ")" + ", " + getCompetence() + "]";
     }
 }

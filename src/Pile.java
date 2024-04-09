@@ -64,4 +64,18 @@ public class Pile {
             }
         }
     }
+
+    @Override
+    public String toString() {
+        String pile = gardiens.length + " gardiens" + "(capacité" + getNbElements() + "): ";
+        for (int i = 0; i < getNbElements(); i++) {
+            if(gardiens[i] != null){
+                pile += getGardiens()[i].toString();
+
+            } else{
+                pile += "[null] ";
+            }
+        }
+        return pile;
+    }
 }
