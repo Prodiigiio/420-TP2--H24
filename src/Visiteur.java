@@ -64,21 +64,41 @@ public class Visiteur {
         this.especes = especes;
     }
 
+    /**
+     * Affiche le visiteur qui entre dans le zoo
+     * @param zoo en question
+     */
     public void entrerDansZoo(Zoo zoo){
         System.out.println("Le visiteur " + getNom() + " est entré dans le zoo " + zoo.getNom());
     }
 
+    /**
+     * Affiche le visiteur qui entre dans l'enclo
+     * @param enclo en question
+     */
     public void entrerDansEnclo(Enclos enclo){
         System.out.println("Le visiteur " + getNom() + " est entré dans l'enclo " + enclo.getNom());
     }
+
+    /**
+     * Affiche le visiteur qui quitte le zoo
+     */
     public void quitterZoo(){
         System.out.println("Le visiteur " + getNom() + " est sorti du zoo");
     }
 
+    /**
+     * Affiche le visiteur qui quitte l'enclo
+     * @param enclo en question
+     */
     public void quitterEnclo(Enclos enclo){
         System.out.println("Le visiteur " + getNom() + " est sorti de l'enclo " + enclo.getNom());
     }
 
+    /**
+     * Affiche les informations du visiteur
+     * @return les informations du visiteur
+     */
     @Override
     public String toString() {
         return "[" + getNom() + ", " + getAge() + "]";
