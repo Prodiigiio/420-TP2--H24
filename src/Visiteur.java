@@ -76,6 +76,11 @@ public class Visiteur {
     }
 
     public void quitterEnclo(Enclos enclo){
-        System.out.println("Le visiteur " + getNom() + " est sorti de l'enclo " + enclo.getNom();
+        System.out.println("Le visiteur " + getNom() + " est sorti de l'enclo " + enclo.getNom());
+    }
+
+    @Override
+    public String toString() {
+        return "[" + getNom() + ", " + getAge() + "]";
     }
 }
