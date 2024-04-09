@@ -66,13 +66,7 @@ public class Entree {
         this.visiteur = visiteur;
     }
 
-    /**
-     * Getter pour le zoo
-     * @return le zoo
-     */
-    public Zoo getZoo() {
-        return zoo;
-    }
+
 
     /**
      * Setter pour le zoo
