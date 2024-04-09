@@ -69,7 +69,7 @@ public class Visiteur {
     }
 
     public void entrerDansEnclo(Enclos enclo){
-
+        System.out.println("Le visiteur " + getNom() + " est entré dans l'enclo " + enclo.getNom();
     }
     public void quitterZoo(){
 
