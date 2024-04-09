@@ -8,7 +8,6 @@ public class Zoo {
 
     /**
      * le constructeur de classe
-     *
      * @param nom pour le nom
      */
     public Zoo(String nom) {
