@@ -65,17 +65,17 @@ public class Visiteur {
     }
 
     public void entrerDansZoo(Zoo zoo){
-        System.out.println("Le visiteur " + getNom() + " est entré dans le zoo " + zoo.getNom();
+        System.out.println("Le visiteur " + getNom() + " est entré dans le zoo " + zoo.getNom());
     }
 
     public void entrerDansEnclo(Enclos enclo){
-        System.out.println("Le visiteur " + getNom() + " est entré dans l'enclo " + enclo.getNom();
+        System.out.println("Le visiteur " + getNom() + " est entré dans l'enclo " + enclo.getNom());
     }
     public void quitterZoo(){
-
+        System.out.println("Le visiteur " + getNom() + " est sorti du zoo");
     }
 
     public void quitterEnclo(Enclos enclo){
-
+        System.out.println("Le visiteur " + getNom() + " est sorti de l'enclo " + enclo.getNom();
     }
 }
